@@ -53,3 +53,14 @@ p{
     font-size: 17px;
     font-family: "Noto Sans", sans-serif;
 }
+.bigform{
+    margin: 15px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.mensagens{
+    height: 40%;
+}

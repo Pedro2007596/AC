@@ -142,6 +142,8 @@ function forms() {
   form.setAttribute("method", "post");
   button.setAttribute("type", "submit");
 
+  form.classList.add('bigform')
+
   h2.appendChild(h2T);
   form.appendChild(h2);
 
@@ -151,8 +153,9 @@ function forms() {
     const input = document.createElement(forms.input);
 
     const labelT = document.createTextNode(forms.name);
+    input.classList.add('mensagens')
 
-    //formgroup.classList.add(forms.classe);
+    formgroup.classList.add('form');
     label.setAttribute("for", forms.for);
     input.setAttribute("type", forms.type);
     input.setAttribute("id", forms.id);
@@ -166,54 +169,59 @@ function forms() {
 
   button.appendChild(btT);
   form.appendChild(button);
-  fundo.appendChild(img);
-  fundo.appendChild(form);
+  section.appendChild(form);
   main.appendChild(section);
 }
 
-function footer(){
-    const footer = document.querySelector("footer")
-    const sobre = [
-        {
-            Nome: 'Victor Cecilio',
-            links: ['https://github.com/victor12020','https://www.instagram.com/vcecilioao?igsh=c3FtZmwzMnM0ajds','https://www.instagram.com/vcecilioao?igsh=c3FtZmwzMnM0ajds'],
-            sites: ['Github','Instagram','Whatsapp'],
-            img: ['./img/github.png','./img/instagram.png','./img/whatsapp.png']
-        },
-        {
-            Nome: 'Pedro Henrique S. Ferreira',
-            links: ['https://github.com/Pedro2007596','','',''],
-            sites: ['Github','Instagram','Whatsapp'],
-            img: ['./img/github.png','./img/instagram.png','./img/whatsapp.png']
-        },
-        {
-            Nome: 'Leandro Afonso S.S Júnior',
-            links: ['https://github.com/TLean07','https://www.instagram.com/ileandrojr07?igsh=aWFrbm9yems5d3oz','https://wa.me/qr/UX6ZEKFKWHPMF1'],
-            sites: ['Github','Instagram','Whatsapp'],
-            img: ['./img/github.png','./img/instagram.png','./img/whatsapp.png']
-        }
-    ] 
-    sobre.forEach(sobre => {
-        const div = document.createElement('div')
-        const divI = document.createElement('div')
-        const nome = document.createElement('h2')
-        const nomeT = document.createTextNode(sobre.Nome)
-        
-        nome.appendChild(nomeT)
-        div.appendChild(nome)
-        
+function footer() {
+  const footer = document.querySelector("footer");
+  const sobre = [
+    {
+      Nome: "Victor Cecilio",
+      links: [
+        "https://github.com/victor12020",
+        "https://www.instagram.com/vcecilioao?igsh=c3FtZmwzMnM0ajds",
+        "https://www.instagram.com/vcecilioao?igsh=c3FtZmwzMnM0ajds",
+      ],
+      sites: ["Github", "Instagram", "Whatsapp"],
+      img: ["./img/github.png", "./img/instagram.png", "./img/whatsapp.png"],
+    },
+    {
+      Nome: "Pedro Henrique S. Ferreira",
+      links: ["https://github.com/Pedro2007596", "", ""],
+      sites: ["Github", "Instagram", "Whatsapp"],
+      img: ["./img/github.png", "./img/instagram.png", "./img/whatsapp.png"],
+    },
+    {
+      Nome: "Leandro Afonso S.S Júnior",
+      links: [
+        "https://github.com/TLean07",
+        "https://www.instagram.com/ileandrojr07?igsh=aWFrbm9yems5d3oz",
+        "https://wa.me/qr/UX6ZEKFKWHPMF1",
+      ],
+      sites: ["Github", "Instagram", "Whatsapp"],
+      img: ["./img/github.png", "./img/instagram.png", "./img/whatsapp.png"],
+    },
+  ];
+  sobre.forEach((sobre) => {
+    const div = document.createElement("div");
+    const divI = document.createElement("div");
+    const nome = document.createElement("h2");
+    const nomeT = document.createTextNode(sobre.Nome);
 
-        for(i=0;i<sobre.lenght;i++){
-            const link = document.createElement('a')
-            const img = document.createElement('img')
-            link.href = sobre.links[i]
-            img.src = sobre.img[i]
-            img.alt = sobre.sites[i]
-            a.appendChild(img)
-            divI.appendChild(a)
-        }
-        div.appendChild(divI)
-        footer.appendChild(div)
-        
-    })
-} 
+    nome.appendChild(nomeT);
+    div.appendChild(nome);
+
+    for (i = 0; i <= 4; i++) {
+      const link = document.createElement("a");
+      const img = document.createElement("img");
+      link.href = sobre.links[i];
+      img.src = sobre.img[i];
+      img.alt = sobre.sites[i];
+      link.appendChild(img);
+      divI.appendChild(link);
+    }
+    div.appendChild(divI);
+    footer.appendChild(div);
+  });
+}
