@@ -1,0 +1,55 @@
+header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+li{
+    margin: 15px;
+}
+section{
+    margin-bottom: 50px;
+}
+
+h2{
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+}
+.banner{
+    width:98%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(img/dbpfp28-1408a470-d6ba-4c44-927b-6e43fdb8dd86.png);
+    margin: 20px;
+}
+.card{
+    margin-left: 40px;
+}
+h3{
+    font-size: 20px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: bold;
+}
+
+p{
+    font-size: 17px;
+    font-family: "Noto Sans", sans-serif;
+}
